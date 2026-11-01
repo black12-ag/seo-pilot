@@ -72,6 +72,21 @@ class BundleTests(unittest.TestCase):
             self.assertTrue((destination / 'alias' / 'guide.md').is_file())
             self.assertFalse((destination / 'alias' / '.env').exists())
 
+    def test_import_omits_tracked_bytecode_removed_by_skill_installers(self):
+        spec = importlib.util.spec_from_file_location('bundle_builder', ROOT / 'scripts' / 'build_bundle.py')
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        with tempfile.TemporaryDirectory() as tmp:
+            source, destination = Path(tmp) / 'source', Path(tmp) / 'bundle'
+            (source / '__pycache__').mkdir(parents=True)
+            subprocess.run(['git', 'init', '-q', str(source)], check=True)
+            (source / 'tool.py').write_text('print("public")')
+            (source / '__pycache__' / 'tool.pyc').write_bytes(b'compiled fixture')
+            subprocess.run(['git', '-C', str(source), 'add', '-f', 'tool.py', '__pycache__/tool.pyc'], check=True)
+            module.copy_source(source, destination)
+            self.assertTrue((destination / 'tool.py').exists())
+            self.assertFalse((destination / '__pycache__').exists())
+
 
 if __name__ == '__main__':
     unittest.main()

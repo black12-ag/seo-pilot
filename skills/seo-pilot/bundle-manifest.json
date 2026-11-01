@@ -514,7 +514,6 @@
     "vendor/marketingskills/VERSIONS.md": "3d58e8225cd07f4911ef5d8ac167e0fc35aeb166692bff4fc5f199780c3447f3",
     "vendor/marketingskills/docs/skill-release-packaging.md": "cd9d83a4a6bb1c91730561f8034bcfaed01416b0b57ab69228c6be1b7763454d",
     "vendor/marketingskills/partners.json": "f2c1adbd511bca4a6db85ba1dc34ac9140f58df8b56a6410a9060ac6470bdee1",
-    "vendor/marketingskills/scripts/__pycache__/package_skills.cpython-312.pyc": "6b46cc13e56edc9ca1edc848f7533179d63e29aa7a418ca39b96de5e67a7a7e1",
     "vendor/marketingskills/scripts/check-versions.mjs": "588b740f1625516d3d2e86574e36d23faa34bd08d67dfbf1033c6112e74bffc0",
     "vendor/marketingskills/scripts/claude-web-descriptions.json": "3692e5e7b95c2fb938db499f8851ecf391838e87764ccab707eaeaeba189ccd6",
     "vendor/marketingskills/scripts/package_skills.py": "bf8e23aa90a9031bcdc4e082044f6af4bc1e25fec7d0eb0393281222a7216794",

@@ -9,6 +9,7 @@ import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
 SKILL = ROOT / 'skills' / 'seo-pilot'
+CACHE_PARTS = {'__pycache__', '.pytest_cache', '.venv', 'node_modules', '.DS_Store'}
 
 
 def verify_source(path, commit):
@@ -30,7 +31,8 @@ def validate_links(path):
 def copy_source(source, destination):
     source, destination = source.resolve(), destination.resolve()
     tracked = subprocess.check_output(['git', '-C', str(source), 'ls-files', '-z']).decode().split('\0')
-    tracked = {name for name in tracked if name}
+    tracked = {name for name in tracked if name and not (set(Path(name).parts) & CACHE_PARTS)
+               and Path(name).suffix not in {'.pyc', '.pyo'}}
     for name in sorted(tracked):
         entry = source / name
         resolved = entry.resolve()

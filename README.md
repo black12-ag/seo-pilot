@@ -121,7 +121,7 @@ Source revisions live in [`sources.lock.json`](sources.lock.json). To refresh im
 python3 scripts/build_bundle.py --source-dir /path/to/reviewed-checkouts
 ```
 
-The builder rejects mismatched or dirty revisions and symlinks that escape a checkout. Internal upstream symlinks are materialized in the bundle. Never edit imported files in place; improve the integration or contribute upstream, then repin. Re-run tests and a real agent scenario after changing routing or instructions.
+The builder rejects mismatched or dirty revisions and symlinks that escape a checkout. It imports tracked source only, omits generated cache/bytecode files, and materializes internal aliases from tracked members. Never edit imported files in place; improve the integration or contribute upstream, then repin. Re-run tests and a real agent scenario after changing routing or instructions.
 
 Packaging/routing tests cover module inventory, relocation, source drift, integrity, path containment and selected workflows. They do not certify every optional upstream integration or future search-engine behavior.
 
