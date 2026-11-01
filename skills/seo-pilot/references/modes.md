@@ -10,7 +10,9 @@ Read this table, then only the selected modules and supporting references. Modul
 | Structured data | `claude-seo:seo-schema` | `marketingskills:schema` for a focused implementation; never duplicate JSON-LD |
 | Product/category pages | `claude-seo:seo-ecommerce` | `marketingskills:cro`; product facts come from the business's actual catalog |
 | Content, keywords, site organization | `marketingskills:content-strategy` | `claude-seo:seo-content`, `marketingskills:site-architecture`, `copywriting` |
-| AI SEO / GEO / AEO | `marketingskills:ai-seo` | `claude-seo:seo-geo`, `seo-agentic`; resolve factual conflicts using ai-search.md |
+| AI SEO / GEO / AEO | `marketingskills:ai-seo` | `claude-seo:seo-geo`, `seo-agentic`; ai-search.md overrides stale platform claims; ai-visibility.md adds executable measurement |
+| AI mentions, citations, competitors, recommendations | ai-visibility.md | Native Google/Bing reports first when accessible; optional vendor exports/connectors through connectors.md |
+| Named connector or CMS/reporting workflow | connectors.md | Discover actual authorized tools before choosing a bundled module; do not assume a connector exposes every vendor product |
 | Speed / Core Web Vitals | `web-quality-skills:performance` | `core-web-vitals`, `accessibility`; field and lab metrics stay distinct |
 | App Store / Google Play | `marketingskills:aso` | app-and-bot.md; do not assume listing features not supplied |
 | Telegram / public bot discovery | app-and-bot.md | `marketingskills:product-marketing`, `conversion-tracking` for factual messaging and attribution |

@@ -59,6 +59,23 @@ class CliTests(unittest.TestCase):
         self.assertEqual(data['python_supported'], sys.version_info >= (3, 11))
         self.assertEqual(data['routing_ready'], data['python_supported'])
 
+    def test_ai_route_exposes_executable_measurement_and_connector_guidance(self):
+        result = run_cli(SKILL, 'route', 'ai', '--url', 'https://example.com')
+        self.assertEqual(result.returncode, 0, result.stderr)
+        plan = json.loads(result.stdout)
+        self.assertFalse(plan['audit_performed'])
+        self.assertIn('references/ai-visibility.md', plan['references'])
+        self.assertIn('references/connectors.md', plan['references'])
+        for reference in plan['references']:
+            self.assertTrue((SKILL / reference).is_file(), reference)
+        self.assertTrue((SKILL / 'scripts/ai_visibility.py').is_file())
+
+    def test_app_route_exposes_target_guidance_without_ai_measurement(self):
+        result = run_cli(SKILL, 'route', 'all', '--app', 'https://apps.apple.com/app/id123')
+        plan = json.loads(result.stdout)
+        self.assertIn('references/app-and-bot.md', plan['references'])
+        self.assertNotIn('references/ai-visibility.md', plan['references'])
+
     def test_unknown_mode_fails_without_running_anything(self):
         result = run_cli(SKILL, 'route', 'invented-mode')
         self.assertNotEqual(result.returncode, 0)
@@ -69,7 +86,10 @@ class CliTests(unittest.TestCase):
             shutil.copytree(SKILL, moved)
             result = run_cli(moved, 'route', 'ai')
             self.assertEqual(result.returncode, 0, result.stderr)
-            for module in json.loads(result.stdout)['modules']:
+            plan = json.loads(result.stdout)
+            for reference in plan['references']:
+                self.assertTrue((moved / reference).is_file())
+            for module in plan['modules']:
                 self.assertTrue((moved / module['path']).is_file())
 
     def test_tampered_vendor_file_is_rejected(self):

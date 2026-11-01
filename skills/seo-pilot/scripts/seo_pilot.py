@@ -65,8 +65,14 @@ def route(mode, url=None, app=None, bot=None):
     else:
         modes = [mode]
     selected = list(dict.fromkeys(module for part in modes for module in ROUTES[part]))
+    references = ['references/modes.md', 'references/evidence.md']
+    if 'ai' in modes:
+        references += ['references/ai-search.md', 'references/ai-visibility.md', 'references/connectors.md']
+    if any(part in modes for part in ('app', 'bot')):
+        references.append('references/app-and-bot.md')
     return {'audit_performed': False, 'mode': mode,
             'targets': {'website': url, 'app': app, 'bot': bot},
+            'references': references,
             'modules': [modules[name] for name in selected],
             'next': 'Read SKILL.md and the relevant references, collect evidence, execute the selected checks, and produce one deduplicated report.'}
 

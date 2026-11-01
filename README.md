@@ -37,6 +37,8 @@ This uses the open Agent Skills format. The Skills installer supports agents suc
 | Full website audit | `Use $seo-pilot to audit https://example.com` |
 | Audit and fix a codebase | `Use $seo-pilot to audit this project, fix the verified SEO issues, and run the relevant checks.` |
 | AI search / GEO / AEO | `Use $seo-pilot ai https://example.com — check ChatGPT, Google AI search and Perplexity visibility.` |
+| AI competitors and citations | `Use $seo-pilot ai https://example.com — compare our brand with <competitors>, save repeated prompt evidence, and report mentions, citations and recommendations separately.` |
+| Existing AI tracking exports | `Use $seo-pilot to analyze these AI-search observations, check answer accuracy and cited-source gaps, and prioritize verified fixes.` |
 | Speed and responsiveness | `Use $seo-pilot performance https://example.com — measure before recommending changes.` |
 | App Store / Google Play | `Use $seo-pilot app <listing-url> — improve discovery and listing conversion.` |
 | Public bot discovery | `Use $seo-pilot bot <public-profile-url> — audit profile, localization and product links.` |
@@ -51,7 +53,7 @@ Use ordinary language too: “Use SEO Pilot to fix my sitemap” is enough. A na
 | Area | Included capabilities |
 |---|---|
 | Technical SEO | Crawling, indexing, robots, canonicals, redirects, sitemaps, rendering, internal links and international SEO |
-| AI SEO / GEO / AEO | Search-crawler access, clear entities/product facts, useful answers, answer accuracy, citation observations and AI referral measurement |
+| AI SEO / GEO / AEO | Purpose-specific crawler access (including Claude), product facts, prompt portfolios, answer accuracy, sentiment review, competitor/source gaps, citation/recommendation measurement and AI referrals |
 | Content | Search intent, content strategy, topic clusters, comparisons, copywriting and content quality |
 | Ecommerce and local | Product/category SEO, structured data, local business and map/listing workflows |
 | Performance | Field and lab evidence, LCP, INP, CLS, accessibility and technical web quality |
@@ -78,6 +80,8 @@ flowchart LR
 - **One owner per topic.** Overlapping checklists produce one finding, not three repeated reports.
 - **Evidence stays separate.** Local code is not treated as production; old analytics is not current field data; raw HTML is not a rendered browser check.
 - **AI SEO has its own workflow.** Search access is distinct from model-training permission. `llms.txt` is an optional experiment, not a promised Google ranking lever.
+- **Repeatable AI measurement.** An offline helper validates supplied observations, separates mentions/citations/recommendations, reports sample sizes and errors, and keeps engines, surfaces and markets separate. It makes no model calls and does not invent missing results.
+- **Practical connector selection.** A [dated comparison of 12 tools](skills/seo-pilot/references/connectors.md) covers OpenSEO, Ahrefs, Semrush, Ubersuggest, OpenRush, Conductor and supporting tools. Product features, actual connector access and proprietary data requirements stay distinct.
 - **Portable references.** The installed skill includes the upstream resources. No separate global install of the three collections is required to read them.
 - **Pinned, attributed sources.** Upstream revisions are recorded and imported file hashes are checkable. Existing skills are not overwritten.
 - **One useful output.** A prioritized report names each issue's evidence, owner, fix and verification. If changes were requested, the agent implements within that scope and checks its work.
@@ -87,6 +91,8 @@ flowchart LR
 This is an **agent skill**, not a standalone SEO engine. It needs an AI coding assistant capable of reading skills and using appropriate tools. It cannot guarantee rankings, indexing, AI recommendations or traffic growth.
 
 The offline list, route, integrity and doctor helpers require Python 3.11+ and no third-party Python packages. Live audits need network access. Rendered-page/performance checks need browser tooling; Google/keyword/backlink integrations may need credentials, quota or paid providers. Those integrations are optional, and their fees are not included. Claude SEO's optional runtime supports Python 3.11–3.14 at the pinned version.
+
+The AI measurement helper uses manually reviewed or vendor-supplied answer observations. It summarizes the supplied sample, not global market share or independently verified evidence. It does not collect live answers, schedule monitoring or include paid data. Native Google/Bing reports, vendor datasets, prompt samples and analytics referrals are treated as separate measurements; current official platform guidance takes precedence over dated bundled references.
 
 Without a tool or account, the agent reports that check as **not assessed**, continues independent checks, and avoids invented metrics. Installed resources are not proof that every external service is configured. Upstream installations, hooks, paid calls and publication tools are never run just because the files are bundled.
 
@@ -101,6 +107,15 @@ python3 skills/seo-pilot/scripts/seo_pilot.py route ai --url https://example.com
 python3 skills/seo-pilot/scripts/seo_pilot.py check
 python3 skills/seo-pilot/scripts/seo_pilot.py doctor
 ```
+
+For an existing answer-observation file:
+
+```sh
+python3 skills/seo-pilot/scripts/ai_visibility.py observations.jsonl \
+  --brand Example --domain example.com --competitor Rival
+```
+
+See [AI visibility measurement](skills/seo-pilot/references/ai-visibility.md) for the JSONL format, illustrative records, denominators and the source/accuracy-to-fix workflow. The helper does not fetch websites or call an AI service. Use `$seo-pilot ai <url>` in your agent to coordinate the actual audit with the tools you have.
 
 **`route` prints a workflow plan. It does not fetch your site or claim an audit was performed.** The agent's one-command invocation executes the selected checks using the tools available to that agent.
 
