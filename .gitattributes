@@ -1,0 +1,2 @@
+# Preserve attributed upstream source bytes, including its original whitespace.
+skills/seo-pilot/vendor/** -whitespace

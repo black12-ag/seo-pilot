@@ -1,0 +1,649 @@
+{
+  "schema": 1,
+  "modules": [
+    {
+      "id": "claude-seo:seo",
+      "name": "seo",
+      "source": "claude-seo",
+      "optional": false,
+      "path": "vendor/claude-seo/skills/seo/SKILL.md"
+    },
+    {
+      "id": "claude-seo:seo-agentic",
+      "name": "seo-agentic",
+      "source": "claude-seo",
+      "optional": false,
+      "path": "vendor/claude-seo/skills/seo-agentic/SKILL.md"
+    },
+    {
+      "id": "claude-seo:seo-audit",
+      "name": "seo-audit",
+      "source": "claude-seo",
+      "optional": false,
+      "path": "vendor/claude-seo/skills/seo-audit/SKILL.md"
+    },
+    {
+      "id": "claude-seo:seo-backlinks",
+      "name": "seo-backlinks",
+      "source": "claude-seo",
+      "optional": false,
+      "path": "vendor/claude-seo/skills/seo-backlinks/SKILL.md"
+    },
+    {
+      "id": "claude-seo:seo-cluster",
+      "name": "seo-cluster",
+      "source": "claude-seo",
+      "optional": false,
+      "path": "vendor/claude-seo/skills/seo-cluster/SKILL.md"
+    },
+    {
+      "id": "claude-seo:seo-competitor-pages",
+      "name": "seo-competitor-pages",
+      "source": "claude-seo",
+      "optional": false,
+      "path": "vendor/claude-seo/skills/seo-competitor-pages/SKILL.md"
+    },
+    {
+      "id": "claude-seo:seo-content",
+      "name": "seo-content",
+      "source": "claude-seo",
+      "optional": false,
+      "path": "vendor/claude-seo/skills/seo-content/SKILL.md"
+    },
+    {
+      "id": "claude-seo:seo-content-brief",
+      "name": "seo-content-brief",
+      "source": "claude-seo",
+      "optional": false,
+      "path": "vendor/claude-seo/skills/seo-content-brief/SKILL.md"
+    },
+    {
+      "id": "claude-seo:seo-dataforseo",
+      "name": "seo-dataforseo",
+      "source": "claude-seo",
+      "optional": false,
+      "path": "vendor/claude-seo/skills/seo-dataforseo/SKILL.md"
+    },
+    {
+      "id": "claude-seo:seo-drift",
+      "name": "seo-drift",
+      "source": "claude-seo",
+      "optional": false,
+      "path": "vendor/claude-seo/skills/seo-drift/SKILL.md"
+    },
+    {
+      "id": "claude-seo:seo-ecommerce",
+      "name": "seo-ecommerce",
+      "source": "claude-seo",
+      "optional": false,
+      "path": "vendor/claude-seo/skills/seo-ecommerce/SKILL.md"
+    },
+    {
+      "id": "claude-seo:seo-flow",
+      "name": "seo-flow",
+      "source": "claude-seo",
+      "optional": false,
+      "path": "vendor/claude-seo/skills/seo-flow/SKILL.md"
+    },
+    {
+      "id": "claude-seo:seo-geo",
+      "name": "seo-geo",
+      "source": "claude-seo",
+      "optional": false,
+      "path": "vendor/claude-seo/skills/seo-geo/SKILL.md"
+    },
+    {
+      "id": "claude-seo:seo-google",
+      "name": "seo-google",
+      "source": "claude-seo",
+      "optional": false,
+      "path": "vendor/claude-seo/skills/seo-google/SKILL.md"
+    },
+    {
+      "id": "claude-seo:seo-hreflang",
+      "name": "seo-hreflang",
+      "source": "claude-seo",
+      "optional": false,
+      "path": "vendor/claude-seo/skills/seo-hreflang/SKILL.md"
+    },
+    {
+      "id": "claude-seo:seo-image-gen",
+      "name": "seo-image-gen",
+      "source": "claude-seo",
+      "optional": false,
+      "path": "vendor/claude-seo/skills/seo-image-gen/SKILL.md"
+    },
+    {
+      "id": "claude-seo:seo-images",
+      "name": "seo-images",
+      "source": "claude-seo",
+      "optional": false,
+      "path": "vendor/claude-seo/skills/seo-images/SKILL.md"
+    },
+    {
+      "id": "claude-seo:seo-local",
+      "name": "seo-local",
+      "source": "claude-seo",
+      "optional": false,
+      "path": "vendor/claude-seo/skills/seo-local/SKILL.md"
+    },
+    {
+      "id": "claude-seo:seo-maps",
+      "name": "seo-maps",
+      "source": "claude-seo",
+      "optional": false,
+      "path": "vendor/claude-seo/skills/seo-maps/SKILL.md"
+    },
+    {
+      "id": "claude-seo:seo-page",
+      "name": "seo-page",
+      "source": "claude-seo",
+      "optional": false,
+      "path": "vendor/claude-seo/skills/seo-page/SKILL.md"
+    },
+    {
+      "id": "claude-seo:seo-plan",
+      "name": "seo-plan",
+      "source": "claude-seo",
+      "optional": false,
+      "path": "vendor/claude-seo/skills/seo-plan/SKILL.md"
+    },
+    {
+      "id": "claude-seo:seo-programmatic",
+      "name": "seo-programmatic",
+      "source": "claude-seo",
+      "optional": false,
+      "path": "vendor/claude-seo/skills/seo-programmatic/SKILL.md"
+    },
+    {
+      "id": "claude-seo:seo-schema",
+      "name": "seo-schema",
+      "source": "claude-seo",
+      "optional": false,
+      "path": "vendor/claude-seo/skills/seo-schema/SKILL.md"
+    },
+    {
+      "id": "claude-seo:seo-sitemap",
+      "name": "seo-sitemap",
+      "source": "claude-seo",
+      "optional": false,
+      "path": "vendor/claude-seo/skills/seo-sitemap/SKILL.md"
+    },
+    {
+      "id": "claude-seo:seo-sxo",
+      "name": "seo-sxo",
+      "source": "claude-seo",
+      "optional": false,
+      "path": "vendor/claude-seo/skills/seo-sxo/SKILL.md"
+    },
+    {
+      "id": "claude-seo:seo-technical",
+      "name": "seo-technical",
+      "source": "claude-seo",
+      "optional": false,
+      "path": "vendor/claude-seo/skills/seo-technical/SKILL.md"
+    },
+    {
+      "id": "claude-seo:seo-ahrefs",
+      "name": "seo-ahrefs",
+      "source": "claude-seo",
+      "optional": true,
+      "path": "vendor/claude-seo/extensions/ahrefs/skills/seo-ahrefs/SKILL.md"
+    },
+    {
+      "id": "claude-seo:seo-bing",
+      "name": "seo-bing",
+      "source": "claude-seo",
+      "optional": true,
+      "path": "vendor/claude-seo/extensions/bing-webmaster/skills/seo-bing/SKILL.md"
+    },
+    {
+      "id": "claude-seo:seo-firecrawl",
+      "name": "seo-firecrawl",
+      "source": "claude-seo",
+      "optional": true,
+      "path": "vendor/claude-seo/extensions/firecrawl/skills/seo-firecrawl/SKILL.md"
+    },
+    {
+      "id": "claude-seo:seo-matomo",
+      "name": "seo-matomo",
+      "source": "claude-seo",
+      "optional": true,
+      "path": "vendor/claude-seo/extensions/matomo/skills/seo-matomo/SKILL.md"
+    },
+    {
+      "id": "claude-seo:seo-profound",
+      "name": "seo-profound",
+      "source": "claude-seo",
+      "optional": true,
+      "path": "vendor/claude-seo/extensions/profound/skills/seo-profound/SKILL.md"
+    },
+    {
+      "id": "claude-seo:seo-seranking",
+      "name": "seo-seranking",
+      "source": "claude-seo",
+      "optional": true,
+      "path": "vendor/claude-seo/extensions/seranking/skills/seo-seranking/SKILL.md"
+    },
+    {
+      "id": "claude-seo:seo-unlighthouse",
+      "name": "seo-unlighthouse",
+      "source": "claude-seo",
+      "optional": true,
+      "path": "vendor/claude-seo/extensions/unlighthouse/skills/seo-unlighthouse/SKILL.md"
+    },
+    {
+      "id": "marketingskills:ab-testing",
+      "name": "ab-testing",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/ab-testing/SKILL.md"
+    },
+    {
+      "id": "marketingskills:ad-creative",
+      "name": "ad-creative",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/ad-creative/SKILL.md"
+    },
+    {
+      "id": "marketingskills:ads",
+      "name": "ads",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/ads/SKILL.md"
+    },
+    {
+      "id": "marketingskills:ai-seo",
+      "name": "ai-seo",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/ai-seo/SKILL.md"
+    },
+    {
+      "id": "marketingskills:analytics",
+      "name": "analytics",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/analytics/SKILL.md"
+    },
+    {
+      "id": "marketingskills:aso",
+      "name": "aso",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/aso/SKILL.md"
+    },
+    {
+      "id": "marketingskills:attribution",
+      "name": "attribution",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/attribution/SKILL.md"
+    },
+    {
+      "id": "marketingskills:churn-prevention",
+      "name": "churn-prevention",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/churn-prevention/SKILL.md"
+    },
+    {
+      "id": "marketingskills:co-marketing",
+      "name": "co-marketing",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/co-marketing/SKILL.md"
+    },
+    {
+      "id": "marketingskills:cold-email",
+      "name": "cold-email",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/cold-email/SKILL.md"
+    },
+    {
+      "id": "marketingskills:community-marketing",
+      "name": "community-marketing",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/community-marketing/SKILL.md"
+    },
+    {
+      "id": "marketingskills:competitor-profiling",
+      "name": "competitor-profiling",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/competitor-profiling/SKILL.md"
+    },
+    {
+      "id": "marketingskills:competitors",
+      "name": "competitors",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/competitors/SKILL.md"
+    },
+    {
+      "id": "marketingskills:content-strategy",
+      "name": "content-strategy",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/content-strategy/SKILL.md"
+    },
+    {
+      "id": "marketingskills:conversion-tracking",
+      "name": "conversion-tracking",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/conversion-tracking/SKILL.md"
+    },
+    {
+      "id": "marketingskills:copy-editing",
+      "name": "copy-editing",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/copy-editing/SKILL.md"
+    },
+    {
+      "id": "marketingskills:copywriting",
+      "name": "copywriting",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/copywriting/SKILL.md"
+    },
+    {
+      "id": "marketingskills:cro",
+      "name": "cro",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/cro/SKILL.md"
+    },
+    {
+      "id": "marketingskills:customer-research",
+      "name": "customer-research",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/customer-research/SKILL.md"
+    },
+    {
+      "id": "marketingskills:directory-submissions",
+      "name": "directory-submissions",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/directory-submissions/SKILL.md"
+    },
+    {
+      "id": "marketingskills:emails",
+      "name": "emails",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/emails/SKILL.md"
+    },
+    {
+      "id": "marketingskills:events",
+      "name": "events",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/events/SKILL.md"
+    },
+    {
+      "id": "marketingskills:free-tools",
+      "name": "free-tools",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/free-tools/SKILL.md"
+    },
+    {
+      "id": "marketingskills:image",
+      "name": "image",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/image/SKILL.md"
+    },
+    {
+      "id": "marketingskills:influencer-marketing",
+      "name": "influencer-marketing",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/influencer-marketing/SKILL.md"
+    },
+    {
+      "id": "marketingskills:launch",
+      "name": "launch",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/launch/SKILL.md"
+    },
+    {
+      "id": "marketingskills:lead-magnets",
+      "name": "lead-magnets",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/lead-magnets/SKILL.md"
+    },
+    {
+      "id": "marketingskills:link-building",
+      "name": "link-building",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/link-building/SKILL.md"
+    },
+    {
+      "id": "marketingskills:marketing-council",
+      "name": "marketing-council",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/marketing-council/SKILL.md"
+    },
+    {
+      "id": "marketingskills:marketing-ideas",
+      "name": "marketing-ideas",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/marketing-ideas/SKILL.md"
+    },
+    {
+      "id": "marketingskills:marketing-loops",
+      "name": "marketing-loops",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/marketing-loops/SKILL.md"
+    },
+    {
+      "id": "marketingskills:marketing-plan",
+      "name": "marketing-plan",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/marketing-plan/SKILL.md"
+    },
+    {
+      "id": "marketingskills:marketing-psychology",
+      "name": "marketing-psychology",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/marketing-psychology/SKILL.md"
+    },
+    {
+      "id": "marketingskills:offers",
+      "name": "offers",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/offers/SKILL.md"
+    },
+    {
+      "id": "marketingskills:onboarding",
+      "name": "onboarding",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/onboarding/SKILL.md"
+    },
+    {
+      "id": "marketingskills:paywalls",
+      "name": "paywalls",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/paywalls/SKILL.md"
+    },
+    {
+      "id": "marketingskills:popups",
+      "name": "popups",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/popups/SKILL.md"
+    },
+    {
+      "id": "marketingskills:pricing",
+      "name": "pricing",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/pricing/SKILL.md"
+    },
+    {
+      "id": "marketingskills:product-marketing",
+      "name": "product-marketing",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/product-marketing/SKILL.md"
+    },
+    {
+      "id": "marketingskills:programmatic-seo",
+      "name": "programmatic-seo",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/programmatic-seo/SKILL.md"
+    },
+    {
+      "id": "marketingskills:prospecting",
+      "name": "prospecting",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/prospecting/SKILL.md"
+    },
+    {
+      "id": "marketingskills:public-relations",
+      "name": "public-relations",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/public-relations/SKILL.md"
+    },
+    {
+      "id": "marketingskills:referrals",
+      "name": "referrals",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/referrals/SKILL.md"
+    },
+    {
+      "id": "marketingskills:reverse-engineer-marketing",
+      "name": "reverse-engineer-marketing",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/reverse-engineer-marketing/SKILL.md"
+    },
+    {
+      "id": "marketingskills:revops",
+      "name": "revops",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/revops/SKILL.md"
+    },
+    {
+      "id": "marketingskills:sales-enablement",
+      "name": "sales-enablement",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/sales-enablement/SKILL.md"
+    },
+    {
+      "id": "marketingskills:schema",
+      "name": "schema",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/schema/SKILL.md"
+    },
+    {
+      "id": "marketingskills:seo-audit",
+      "name": "seo-audit",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/seo-audit/SKILL.md"
+    },
+    {
+      "id": "marketingskills:signup",
+      "name": "signup",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/signup/SKILL.md"
+    },
+    {
+      "id": "marketingskills:site-architecture",
+      "name": "site-architecture",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/site-architecture/SKILL.md"
+    },
+    {
+      "id": "marketingskills:sms",
+      "name": "sms",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/sms/SKILL.md"
+    },
+    {
+      "id": "marketingskills:social",
+      "name": "social",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/social/SKILL.md"
+    },
+    {
+      "id": "marketingskills:video",
+      "name": "video",
+      "source": "marketingskills",
+      "optional": false,
+      "path": "vendor/marketingskills/skills/video/SKILL.md"
+    },
+    {
+      "id": "web-quality-skills:accessibility",
+      "name": "accessibility",
+      "source": "web-quality-skills",
+      "optional": false,
+      "path": "vendor/web-quality-skills/skills/accessibility/SKILL.md"
+    },
+    {
+      "id": "web-quality-skills:best-practices",
+      "name": "best-practices",
+      "source": "web-quality-skills",
+      "optional": false,
+      "path": "vendor/web-quality-skills/skills/best-practices/SKILL.md"
+    },
+    {
+      "id": "web-quality-skills:core-web-vitals",
+      "name": "core-web-vitals",
+      "source": "web-quality-skills",
+      "optional": false,
+      "path": "vendor/web-quality-skills/skills/core-web-vitals/SKILL.md"
+    },
+    {
+      "id": "web-quality-skills:performance",
+      "name": "performance",
+      "source": "web-quality-skills",
+      "optional": false,
+      "path": "vendor/web-quality-skills/skills/performance/SKILL.md"
+    },
+    {
+      "id": "web-quality-skills:seo",
+      "name": "seo",
+      "source": "web-quality-skills",
+      "optional": false,
+      "path": "vendor/web-quality-skills/skills/seo/SKILL.md"
+    },
+    {
+      "id": "web-quality-skills:web-quality-audit",
+      "name": "web-quality-audit",
+      "source": "web-quality-skills",
+      "optional": false,
+      "path": "vendor/web-quality-skills/skills/web-quality-audit/SKILL.md"
+    }
+  ]
+}

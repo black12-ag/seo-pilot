@@ -1,0 +1,4 @@
+interface:
+  display_name: "SEO Pilot"
+  short_description: "SEO, AI search, app discovery and web performance"
+  default_prompt: "Use $seo-pilot to audit my website and coordinate technical SEO, AI search visibility, content and performance findings."

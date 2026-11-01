@@ -1,0 +1,8 @@
+{
+  "schema": 1,
+  "sources": [
+    {"id": "claude-seo", "url": "https://github.com/AgriciDaniel/claude-seo", "commit": "6be93f45064ffbadced572b5d5c95f55fd263af0", "license": "MIT"},
+    {"id": "marketingskills", "url": "https://github.com/coreyhaines31/marketingskills", "commit": "88c79f6528a9347420e57ceb1fff9a60de651768", "license": "MIT"},
+    {"id": "web-quality-skills", "url": "https://github.com/addyosmani/web-quality-skills", "commit": "afa8da942115f2961fdbfa80807ea0b232ff6c00", "license": "MIT"}
+  ]
+}
